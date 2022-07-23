@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Calculator</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        form input {
+            text-align: center;
+            outline: none;
+            border: none;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Table Calculator</h1>
+    <form onsubmit="calculator(); {return false;}">
+        <input type="number" id="table" required placeholder="Type A Number"><br><br>
+        <button type="submit">Calculate</button>
+
+    </form>
+    <script type="text/javascript">
+        function calculator() {
+
+            let table = +document.querySelector("#table").value;
+
+            for (let a = 1; a <= 10; a++) {
+                document.write(table + "x" + a + "=" + table * a + "<br>")
+            }
+        }
+    </script>
+</body>
+
+</html>
